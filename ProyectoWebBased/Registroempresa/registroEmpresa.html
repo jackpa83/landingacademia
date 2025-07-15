@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Registro de Empresa</title>
+  <link rel="stylesheet" href="registroEmpresa.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Registro de Empresa</h1>
+    <form method="post" action="registroEmpresa.php">
+
+      <h2>1. Información general</h2>
+      <input type="text" name="nombreEmpresa" placeholder="Nombre de la empresa" required />
+
+      <select name="tipoNegocio" required>
+        <option value="">Tipo de negocio</option>
+        <option value="Panadería">Panadería</option>
+        <option value="Odontólogo">Odontólogo</option>
+        <option value="Abogado">Abogado</option>
+        <option value="Publicista">Publicista</option>
+        <option value="Diseñador">Diseñador</option>
+        <option value="Tienda de Ropa">Tienda de Ropa</option>
+        <option value="Gimnasio">Gimnasio</option>
+        <option value="Restaurante">Restaurante</option>
+        <option value="Consultoría">Consultoría</option>
+      </select>
+
+      <input type="number" name="tiempoMercado" placeholder="Tiempo en el mercado" required />
+
+      <select name="tamano" required>
+        <option value="">Tamaño de la empresa</option>
+        <option value="Pequeña">Pequeña</option>
+        <option value="Mediana">Mediana</option>
+        <option value="Grande">Grande</option>
+      </select>
+
+      <h2>2. Producto o Servicio</h2>
+      <input type="text" name="tiposProductos" placeholder="Tipo de producto o servicio" required />
+      <input type="text" name="caracteristicas" placeholder="Características principales" required />
+
+      <select name="preciosPoliticas" required>
+        <option value="">Precios y políticas de descuento</option>
+        <option value="Fijos">Fijos</option>
+        <option value="Descuentos por volumen">Descuentos por volumen</option>
+        <option value="Ofertas especiales">Ofertas especiales</option>
+      </select>
+
+      <h2>3. Clientes y Mercado</h2>
+      <select name="publicoObjetivo" required>
+        <option value="">Público objetivo</option>
+        <option value="Jóvenes (18-25 años)">Jóvenes (18-25 años)</option>
+        <option value="Adultos (26-45 años)">Adultos (26-45 años)</option>
+        <option value="Mayores (46+ años)">Mayores (46+ años)</option>
+        <option value="Empresas">Empresas</option>
+        <option value="Familias">Familias</option>
+      </select>
+
+      <select name="perfilCliente" required>
+        <option value="">Perfil del cliente ideal</option>
+        <option value="Clientes frecuentes">Clientes frecuentes</option>
+        <option value="Clientes de alto poder adquisitivo">Clientes de alto poder adquisitivo</option>
+        <option value="Clientes ocasionales">Clientes ocasionales</option>
+        <option value="Empresas que buscan servicios">Empresas que buscan servicios</option>
+      </select>
+
+      <select name="satisfaccion" required>
+        <option value="">Nivel de satisfacción actual</option>
+        <option value="Muy Satisfecho">Muy Satisfecho</option>
+        <option value="Satisfecho">Satisfecho</option>
+        <option value="Regular">Regular</option>
+        <option value="Insatisfecho">Insatisfecho</option>
+      </select>
+
+      <h2>4. Marketing y Publicidad</h2>
+      <select name="canales" required>
+        <option value="">¿Utiliza canales publicitarios?</option>
+        <option value="Sí">Sí</option>
+        <option value="No">No</option>
+      </select>
+
+      <select name="presenciaDigital" required>
+        <option value="">¿Tiene presencia digital?</option>
+        <option value="Alta">Alta</option>
+        <option value="Media">Media</option>
+        <option value="Baja">Baja</option>
+      </select>
+
+      <h2>5. Aspectos Financieros</h2>
+      <input type="number" step="0.01" name="ingresosMensuales" placeholder="Ingresos mensuales" required />
+      <input type="number" step="0.01" name="gastoMensual" placeholder="Gasto mensual" required />
+      <input type="number" step="0.01" name="presupuestoMarketing" placeholder="Presupuesto de marketing" required />
+
+      <button type="submit" class="btn">Crear Plan para empresa</button>
+    </form>
+  </div>
+</body>
+</html>

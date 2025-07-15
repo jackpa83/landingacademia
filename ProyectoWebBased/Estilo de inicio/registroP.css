@@ -1,0 +1,126 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Layout general */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+}
+
+/* Contenedor principal dividido */
+.container,
+.logo-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+/* Sección de formulario */
+.container {
+    flex-direction: column;
+    background-color: #ffffff;
+}
+
+.container h1 {
+    margin-bottom: 1.5rem;
+    color: #333;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.container form {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group {
+    margin-bottom: 1rem;
+}
+
+.input-group input {
+    padding: 0.75rem;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.container button[type="submit"] {
+    padding: 0.75rem;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+    font-weight: bold;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    width: 100%;
+}
+
+.container button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.container p {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.container a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.container a:hover {
+    text-decoration: underline;
+}
+
+/* Sección de imagen */
+.logo-section img {
+    max-width: 100%;
+    height: auto;
+    max-height: 500px;
+}
+
+/* Placeholders */
+::placeholder {
+    color: #999;
+    opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    .container,
+    .logo-section {
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    .logo-section img {
+        max-height: 250px;
+    }
+}

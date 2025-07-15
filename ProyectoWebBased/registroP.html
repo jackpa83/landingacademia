@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuario</title>
+    <link rel="stylesheet" href="Estilo de inicio/registroP.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Registro de Usuario</h1>
+        <form id="registroForm" method="post" action="Administrador/registro.php">
+            <div class="input-group">
+                <input type="text" name="name" placeholder="Nombre completo" required>
+            </div>
+            <div class="input-group">
+                <input type="email" name="email" placeholder="Correo electrónico" required>
+            </div>
+            <div class="input-group">
+                <input type="password" name="password" placeholder="Contraseña" required minlength="8">
+            </div>
+            <div class="input-group">
+                <input type="password" name="confirm_password" placeholder="Confirmar contraseña" required>
+            </div>
+            <button type="submit" name="register">Registrarse</button>
+            <p>¿Ya tienes cuenta? <a href="InicioP.html">Inicia sesión aquí</a></p>
+        </form>
+    </div>
+
+    <div class="logo-section">
+        <img src="images/Logo.png" alt="Logo de la empresa">
+    </div>
+
+    <script>
+        document.getElementById('registroForm').addEventListener('submit', function(e) {
+            const password = document.querySelector('input[name="password"]');
+            const confirmPassword = document.querySelector('input[name="confirm_password"]');
+            
+            if (password.value !== confirmPassword.value) {
+                e.preventDefault();
+                alert('Las contraseñas no coinciden');
+                confirmPassword.focus();
+            }
+        });
+    </script>
+</body>
+</html>
